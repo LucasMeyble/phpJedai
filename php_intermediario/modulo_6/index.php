@@ -126,17 +126,33 @@
   //   echo $email;
   // }
 
-  if(isset($_POST['acao'])){
-    foreach ($_POST['valor'] as $key => $value) {
-      echo $key;
-      echo '=>';
-      echo $value;
-      echo '<hr>';
-    }
-  }
+  // if(isset($_POST['acao'])){
+  //   foreach ($_POST['valor'] as $key => $value) {
+  //     echo $key;
+  //     echo '=>';
+  //     echo $value;
+  //     echo '<hr>';
+  //   }
+  // }
+
+  //------------------------------------------------------------------------------------------------------------------------
+  //sessões e cookies
+
+  session_start();
+  // $_SESSION['nome'] = 'lucas';
+  // $_SESSION['idade'] = 21;
+
+  //para apagar o cookie coloca-se o valor negativo do tempo
+  // setcookie('nome', 'lucas', time() + (60*60*24), '/');
+  setcookie('nome', 'lucas', time() - (60*60*24), '/');
+
+
+
+  echo $_COOKIE['nome'];
+
 
 ?>
-
+<!-- 
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -153,9 +169,9 @@
     <input type="checkbox" name="valor[]" value="30">30
     <input type="checkbox" name="valor[]" value="40">40
 
-    <!-- <input type="text" name="name" />
-    <input type="text" name="email" /> -->
+    <input type="text" name="name" />
+    <input type="text" name="email" />
     <input type="submit" name="acao" value="Enviar" />
   </form>
 </body>
-</html>
+</html> -->

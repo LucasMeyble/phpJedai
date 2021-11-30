@@ -1,5 +1,5 @@
 <?php 
-
+  //aula 1
   // class Pessoa {
   //   private $name = 'lucas';
   //   private $idade = '21';
@@ -17,8 +17,9 @@
   // $pessoa = new Pessoa;
 
   // $pessoa->crescer('teste');
-
-  include('Exemplo.class.php');
+  // ------------------------------------------------------------------------------------
+  // aula 2
+  // include('Exemplo.class.php');
 
   // $exemplo = new Exemplo();
 
@@ -30,10 +31,31 @@
   // $exemplo2->var2 = 'joao';
   // echo $exemplo2->var2;
 
-  echo Exemplo::$var3;
-  echo '<br>';
-  echo Exemplo::$var3 = 'teste';
-  echo '<br>';
-  Exemplo::metodoEstatico();
+  // echo Exemplo::$var3;
+  // echo '<br>';
+  // echo Exemplo::$var3 = 'teste';
+  // echo '<br>';
+  // Exemplo::metodoEstatico();
+  // ------------------------------------------------------------------------------------
+  // aula 3
 
+  final class filha{
+    public function mostrarOla(){
+      echo 'ola mundo';
+    }
+  }
+
+  class Pai{
+    public function mostrarTchau(){
+      echo 'tchau mundo';
+    }
+  }
+
+  $pai = new Pai();
+
+  $pai->mostrarTchau();
+
+  $filha = new Filha();
+
+  $filha->mostrarOla();
 ?>

@@ -16,6 +16,6 @@
 
   $pessoa = new Pessoa;
 
-  $pessoa->crescer();
+  $pessoa->crescer('teste');
 
 ?>

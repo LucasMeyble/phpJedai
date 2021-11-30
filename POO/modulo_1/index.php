@@ -39,23 +39,40 @@
   // ------------------------------------------------------------------------------------
   // aula 3
 
-  final class filha{
-    public function mostrarOla(){
-      echo 'ola mundo';
+  // final class filha{
+  //   public function mostrarOla(){
+  //     echo 'ola mundo';
+  //   }
+  // }
+
+  // class Pai{
+  //   public function mostrarTchau(){
+  //     echo 'tchau mundo';
+  //   }
+  // }
+
+  // $pai = new Pai();
+
+  // $pai->mostrarTchau();
+
+  // $filha = new Filha();
+
+  // $filha->mostrarOla();
+  // ------------------------------------------------------------------------------------
+  // aula 4
+
+  //so serve para ser erdada nao pode ser isntanciada
+  abstract class teste{
+    abstract function func2();
+  }
+
+  class Principal extends teste{
+    public function func2(){
+      echo 'tesste de sobrescrever uma função abstrata';
     }
   }
 
-  class Pai{
-    public function mostrarTchau(){
-      echo 'tchau mundo';
-    }
-  }
+  $teste = new Principal();
 
-  $pai = new Pai();
-
-  $pai->mostrarTchau();
-
-  $filha = new Filha();
-
-  $filha->mostrarOla();
+  $teste->func2();
 ?>

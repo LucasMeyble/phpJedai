@@ -62,17 +62,34 @@
   // aula 4
 
   //so serve para ser erdada nao pode ser isntanciada
-  abstract class teste{
-    abstract function func2();
+  // abstract class teste{
+  //   abstract function func2();
+  // }
+
+  // class Principal extends teste{
+  //   public function func2(){
+  //     echo 'tesste de sobrescrever uma função abstrata';
+  //   }
+  // }
+
+  // $teste = new Principal();
+
+  // $teste->func2();
+  // ------------------------------------------------------------------------------------
+  // aula 5
+  //se eu usar o interface eu tenho q obrigatoriamente reescrever a função aonde estou usando a interface.
+  interface Interface1{
+    public function printOnScreen($par);
   }
 
-  class Principal extends teste{
-    public function func2(){
-      echo 'tesste de sobrescrever uma função abstrata';
+  class Texto implements Interface1{
+    public function printOnScreen($par){
+      echo $par;
     }
   }
 
-  $teste = new Principal();
+  $texto = new Texto;
 
-  $teste->func2();
+  $texto->printOnScreen('ola mundo');
+
 ?>

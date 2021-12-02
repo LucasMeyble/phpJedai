@@ -78,18 +78,45 @@
   // ------------------------------------------------------------------------------------
   // aula 5
   //se eu usar o interface eu tenho q obrigatoriamente reescrever a função aonde estou usando a interface.
-  interface Interface1{
-    public function printOnScreen($par);
-  }
+  // interface Interface1{
+  //   public function printOnScreen($par);
+  // }
 
-  class Texto implements Interface1{
-    public function printOnScreen($par){
-      echo $par;
+  // class Texto implements Interface1{
+  //   public function printOnScreen($par){
+  //     echo $par;
+  //   }
+  // }
+
+  // $texto = new Texto;
+
+  // $texto->printOnScreen('ola mundo');
+
+  // ------------------------------------------------------------------------------------
+  // aula 6
+
+  class Class1{
+    private $name;
+    private $idade;
+
+    public function __construct($name, $idade){
+      $this->name = $name;
+      $this->idade = $idade;
+    }
+
+    public function getName(){
+      return $this->name;
+    }
+
+    public function getIdade(){
+      return $this->idade;
     }
   }
 
-  $texto = new Texto;
+  $class = new Class1('lucas', 21);
 
-  $texto->printOnScreen('ola mundo');
+  echo $class->getName();
+  echo $class->getIdade();
+
 
 ?>
